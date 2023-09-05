@@ -25,7 +25,7 @@ def preprocess(rain):
     categorical_pipeline = Pipeline(
         steps=[
             ("impute", SimpleImputer(strategy="most_frequent")),
-            ("oh-encode", OneHotEncoder(handle_unknown="ignore", sparse=False)),
+            ("oh-encode", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
         ]
     )
 
